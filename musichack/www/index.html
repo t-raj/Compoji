@@ -8,205 +8,57 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
         <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" type ="text/css" href="css/index.css" />
-        <title>BOWLFUL</title>
+        <title>VibeMaker</title>
     </head>
 
     <body>
-      <!-- Login Page -->
-      <div data-role="page" id="login" >
 
-        <div data-role="header">
-          <h3>BOWLFUL</h3>
-        </div><!-- /header -->
-        <img id="loginbg" src="img/login.jpg"/>
-        <div role="main" class="ui-content">
-          <a href="#home" class="facebook" data-role="button" data-corners="false" data-transition="slide">Login with Facebook</a>
-        </div>
-      </div>
-      <!-- /Login Page -->
       <!-- Main Page -->
       <div data-role="page" id="home">
         <!-- Header -->
         <div data-role="header">
-          <a href="#nav-panel" class = "ui-btn ui-shadow ui-corner-all  ui-icon-bars ui-btn-icon-notext" data-transition="slide" ></a>
-          <h3>BOWLFUL</h3>
-          <a href="#addPet" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext" data-transition="pop" ></a>
+          <h3>What's your vibe?</h3>
+
         </div>
         <!-- /Header -->
         <div role="main" class="ui-content">
-          <div id="insert" class="pets">
-
-          </div>
+          <img id="excited" src="img/excited.png" width="33%">
+          <img id="happy" src="img/happy.png" width="33%">
+          <img id="chill" src="img/chill.png" width="33%">
+          <img id="angry" src="img/angry.png" width="33%">
+          <img id="sad" src="img/sad.png" width="33%">
+          <img id="apathetic" src="img/apathetic.png" width="33%">
         </div>
 
-          <div data-role="popup" id="confirm" data-overlay-theme="b" data-theme="b" data-transistion="fade" style="max-width:400px;">
-            <div data-role="header" id="confirmHeader">
-              <h1></h1>
-            </div>
-            <div role="main" class="ui-content">
-              <p id="lastfed" class="ui-title"></p>
-              <fieldset data-role="controlgroup" data-type="horizontal">
-                <a href="" id="cancel" class="ui-btn ui-corner-all ui-shadow" data-rel="back">Cancel</a>
-                <button id="feed" class="ui-btn ui-corner-all ui-shadow" >Feed</button>
-              </fieldset>
-            </div>
+
+
           </div>
 
-          <div data-role="popup" id="addPet" data-overlay-theme="b" data-theme="b" style="max-width:600px;">
-            <div data-role="header">
-                <h1>New Pet</h1>
-            </div>
-            <div role="main" class="ui-content">
-              <form method="post">
-                <label for="name"></label>
-                <input type="text" name="name" id="newPetName" placeholder="Name" value=""/>
-              </form>
-              <fieldset data-role="controlgroup" data-type="horizontal">
-                <a href="#camera" data-role="button"  data-corners="false" >Add Photo</a>
-                <a href="" class="ui-btn ui-corner-all ui-shadow" data-rel="back">Cancel</a>
-                <button class="ui-btn ui-corner-all ui-shadow" id="addPetConfirm">Done</button>
-              </fieldset>
-            </div>
-          </div>
 
-          <div data-role="panel" data-position="left" data-position-fixed="false" data-display="reveal" id="nav-panel" data-theme="a">
-            <ul data-role="listview" data-theme="a" data-divider-theme="a" style="margin-top:-16px;" class="nav-search">
-              <li data-icon="delete" >
-                <a href="#" data-rel="close">cartfisk</a>
-              </li>
-              <li data-filtertext="">
-                <a href="#managePets">Manage Pets</a>
-              </li>
-              <li data-filtertext="">
-                <a href="#settings">Settings</a>
-              </li>
-              <li data-filtertext="">
-                <a href="#help">Help</a>
-              </li>
-              <li data-filtertext="">
-                <a href="#dev">Developer Tools</a>
-              </li>
-            </ul>
-        </div>
+
+=
       </div>
       <!-- /Main Page -->
 
-      <!-- Camera Page -->
-      <div data-role="page" id="camera">
-        <div data-role="header"><!-- header -->
-          <h3>Pet Photo</h3>
-          <a href="#home"  class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="pop" ></a>
-        </div><!-- /header -->
-        <div role="main" class="ui-content">
-          <ul data-role="listview" data-inset="true">
-            <li data-role="divider">Choose Photo Source</li>
-            <li><a id="cameraPhoto" href="#">Take Photo with Camera</a></li>
-            <li><a id="galleryPhoto" href="#">Get Photo from Gallery</a></li>
-          </ul>
-        </div><!-- /content -->
-      </div>
-      <!-- /Camera Page -->
 
-      <!-- Manage Pets Page -->
-      <div data-role="page" id="managePets">
+
+      <!-- Excited Page -->
+      <div data-role="page" id="excited">
         <!-- Header -->
         <div data-role="header">
           <!-- <button class = "ui-btn ui-shadow ui-corner-all  ui-icon-bars ui-btn-icon-notext" data-rel="back" data-transition="slide" ></button> -->
           <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="slide" ></a>
-          <h3>Manage Pets</h3>
-          <!-- <a href="#addPet" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext" data-transition="pop" ></a> -->
-        </div>
-        <button id="save" class="ui-btn ui-corner-all ui-shadow">Save</button>
-        <!-- Placeholders entered by Matty and Dave, 2015/12/03. -->
-        <button id="edit" class="ui-btn ui-corner-all ui-shadow">Edit</button>
-        <button id="add" class="ui-btn ui-corner-all ui-shadow">Add</button>
-        <button id="remove" class="ui-btn ui-corner-all ui-shadow">Remove</button>
-        <!-- /Header -->
-      </div>
-      <!-- /Manage Pets Page -->
+          <h3></h3>
 
-      <!-- Dev Tools -->
-      <div data-role="page" id="dev">
-        <div data-role="header">
-          <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="slide" ></a>
-          <h3>Manage Pets</h3>
         </div>
-        <div role="main" class="ui-content">
-          <button id="tester">Tester</button>
-          <button id="clearLS">Clear LS</button>
-          <button id="clearDOM">Clear DOM</button>
-          <button id="savetoLS">Save to localStorage</button>
-          <button id="loadfromLS">Load from localStorage</button>
-          <button id="loadDOM">Load DOM from petsArray</button>
-        </div>
+
       </div>
-      <!-- /Dev Tools -->
+      <!-- /Excited Pets Page -->
 
 
-      <!-- Settings Page -->
-      <div data-role="page" id="settings">
-        <!-- Header -->
-        <div data-role="header">
-          <!-- <button class = "ui-btn ui-shadow ui-corner-all  ui-icon-bars ui-btn-icon-notext" data-rel="back" data-transition="slide" ></button> -->
-          <!-- <a href="#nav-panel" class = "ui-btn ui-shadow ui-corner-all  ui-icon-bars ui-btn-icon-notext" data-transition="slide" ></a> -->
-          <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="slide" ></a>
-          <h3>Settings</h3>
-          <!-- <a href="#addPet" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext" data-transition="pop" ></a> -->
-        </div>
-        <!-- /Header -->
-        <!-- Body -->
-        <div role="main" class="ui-content">
-          <!-- <p id="feedTime1" class="ui-title">Feed Time 1:</p> -->
-          <form id="feed1">
-            Feed Time 1:
-            <input type="time" name="feedTime1">
-          </form>
-          <form id="feed2">
-            Feed Time 2:
-            <input type="time" name="feedTime2">
-          </form>
-        </div>
-        <!-- /Body -->
-      </div>
-      <!-- /Settings Page -->
-      <!-- Help Page -->
-      <div data-role="page" id="help">
-        <!-- Header -->
-        <div data-role="header">
-          <!-- <button class = "ui-btn ui-shadow ui-corner-all  ui-icon-bars ui-btn-icon-notext" data-rel="back" data-transition="slide" ></button> -->
-          <!-- <a href="#settings" class = "ui-btn ui-shadow ui-corner-all  ui-icon-bars ui-btn-icon-notext" data-transition="slide" ></a> -->
-          <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext" data-transition="slide" ></a>
-          <h3>Help</h3>
-          <!-- <a href="#addPet" data-rel="popup" data-position-to="window" class="ui-btn ui-shadow ui-corner-all ui-icon-plus ui-btn-icon-notext" data-transition="pop" ></a> -->
-        </div>
-        <!-- /Header -->
-        <!-- Body -->
-        <div role="main" class="ui-content">
-          <p>
-            On the HOME page, you will find your pets displayed. Each pet will have a colored ring around the pet image of your pet. If the ring is <span style="color: #b3ff66">GREEN</span>, your pet is happy. If the ring is <span style="color: #ffff4d">YELLOW</span>, Your pet is almost time to feed your pet. Finally, if the ring is <span style="color: #ff6666">RED</span>, your pet needs to be fed.
-          </p>
-          <p>
-            The ADD A PET popup from the HOME page or from the ADD button on the MANAGE PETS page, which is accessed by tapping the PLUS button in the upper right corner, allows you to add an additional pet. You will be prompted to provide a name and either take a photo or select one from the phone's gallery.
-          </p>
-          <p>
-            By Simply tapping the photo of your pet, you can bring up the FEED A PET pop up. The FEED A PET popup will ask you to confirm that the pet has been fed by pressing the FEED button.
-          </p>
-          <p>
-            The SELECTION PANEL can be entered by tapping the BARS button in the upper left corner of the HOME page. In the SELECTION PANEL, you will see your ID and be able to navigate to the MANAGE PETS, SETTINGS, and HELP pages.
-          </p>
-          <p>
-            On the MANAGE PETS page, you may add or remove a pet from your profile. You can also select a pet and edit their name and photo.
-          </p>
-          <p>
-            On the SETTINGS page, you can select two feed times for your pet.
-          </p>
-          <p>
-            By clicking the HOME button, in the upper right corner of the MANAGE PETS, SETTINGS, and HELP pages, you can return to the HOME page.
-          </p>
-        </div>
-        <!-- /Body -->
-      </div>
-      <!-- /Help Page -->
+
+
+
       <script type="text/javascript" src="cordova.js"></script>
       <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
       <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
